@@ -2,14 +2,13 @@ grpc-templ-cpp-js-docker
 =======================
 
 ## A gRPC / gRPC-Web Template Project including a C++ Server and a Javascript Client using a Docker Container Development Environment with VS Code
------------------------
 
 This project can be used as a template to build **gRPC / gRPC-Web applications** with **C++ backend** and **javascript Web UI** within a **Docker container** using **VS Code**
 
 This template will build an end-to-end Echo application example with 3 components:
  - Front-end JS client (using gRPC-Web)
  - C++ gRPC backend server
- - Envoy proxy (required by the gRPC-Web)
+ - Envoy proxy ([required by the gRPC-Web](https://grpc.io/blog/state-of-grpc-web/))
 
 The interesting aspects of the project are:
 - **Docker container development environment for gRPC**
