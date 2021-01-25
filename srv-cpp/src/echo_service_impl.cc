@@ -55,7 +55,7 @@ void EchoServiceImpl::CopyClientMetadataToResponse(ServerContext* context) {
 Status EchoServiceImpl::Echo(ServerContext* context, const EchoRequest* request,
                              EchoResponse* response) {
   CopyClientMetadataToResponse(context);
-  response->set_message(request->message());
+  response->set_message("Response from server: " + request->message());
   return Status::OK;
 }
 
@@ -83,7 +83,7 @@ Status EchoServiceImpl::ServerStreamingEcho(
       return Status::CANCELLED;
     }
     ServerStreamingEchoResponse response;
-    response.set_message(request->message());
+    response.set_message("Streaming from server: " + request->message());
     usleep(request->message_interval() * 1000);
     writer->Write(response);
   }
