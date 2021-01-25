@@ -1,0 +1,33 @@
+version: '3'
+services:
+  srv-cpp:
+    build:
+      context: ./
+      dockerfile: ./docker/srv-cpp/Dockerfile
+    image: grpcweb/srv-cpp
+    ports:
+      - "9090:9090"    
+  srv-html:
+    build:
+      context: ./
+      dockerfile: ./docker/srv-html/Dockerfile
+    image: grpcweb/srv-html
+    ports:
+      - "8081:8081"    
+  envoy:
+    build:
+      context: ./
+      dockerfile: ./docker/envoy-proxy/Dockerfile
+    image: grpcweb/envoy
+    ports:
+      - "8080:8080"
+
+
+
+
+
+
+
+
+
+
