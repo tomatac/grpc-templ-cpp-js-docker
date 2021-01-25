@@ -16,9 +16,6 @@
  *
  */
 
-// const {EchoRequest,
-      //  ServerStreamingEchoRequest} = require('../protos/build/echo_pb.js');
-// const {EchoServiceClient} = require('../protos/build/echo_grpc_web_pb.js');
 const {EchoRequest, ServerStreamingEchoRequest} = require('./build-protos/echo_pb.js');
 const {EchoServiceClient} = require('./build-protos/echo_grpc_web_pb.js');
 const {EchoApp} = require('./echoapp.js');
