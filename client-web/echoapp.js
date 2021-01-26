@@ -45,7 +45,7 @@ echoapp.EchoApp.addMessage = function(message, cssClass) {
  * @param {string} message
  */
 echoapp.EchoApp.addLeftMessage = function(message) {
-  this.addMessage(message, "label-primary pull-left");
+  this.addMessage("Message from client: " + message, "label-primary pull-left");
 };
 
 /**
